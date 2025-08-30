@@ -1,33 +1,32 @@
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Routes, Route, Link } from "react-router-dom";
 
-import Features from "components/Features";
+import AuthProvider from "components/security/AuthContext";
 
-function App() {
+import RequireAuth from "components/security/RequireAuth";
 
+import Home from "pages/Home";
+import Secret from "pages/Secret";
+import NoMatch from "pages/NoMatch";
+
+import "./App.css";
+
+export default function App() {
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <Features />
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <AuthProvider>
+        <div>
+          <Link to="/">Home</Link>
+          <br />
+          <Link to="/secret">Secret</Link>
+        </div>
+        <Routes>
+          <Route path="/" element={<Home />} />
+
+          <Route path="/secret" element={<RequireAuth><Secret /></RequireAuth>} />
+
+          <Route path="*" element={<NoMatch />} />
+        </Routes>
+      </AuthProvider>
     </>
   )
 }
-
-export default App
