@@ -1,0 +1,15 @@
+.avatar-background {
+	background-color: var(--contrast);
+	border-radius: 50%;
+	text-align: center;
+}
+
+.avatar-letter {
+	color: white;
+	font-family: "Montserrat", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 700;
+	font-style: normal;
+	line-height: 1;
+	position: relative;
+}

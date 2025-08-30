@@ -1,0 +1,7 @@
+.user-account-button {
+  background-color: white;
+}
+
+.dropdown-menu {
+	border-radius: var(--border-radius);
+}

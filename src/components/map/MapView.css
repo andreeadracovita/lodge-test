@@ -1,0 +1,17 @@
+.map {
+	width: 100%;
+	height: 1000px;
+	border-radius: var(--border-radius);
+	overflow: hidden;
+}
+
+.ol-zoom {
+	top: 1rem;
+	right: 1rem;
+	left: auto;
+	display: none;
+}
+
+#fullscreen-map .ol-zoom {
+	display: block;
+}

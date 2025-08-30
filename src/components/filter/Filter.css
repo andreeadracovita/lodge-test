@@ -1,0 +1,11 @@
+.rc-slider-handle {
+  border: solid 2px var(--brand-color) !important;
+  opacity: 1 !important;
+  width: 18px !important;
+  height: 18px !important;
+  margin-top: -6px !important;
+}
+
+.rc-slider-track {
+  background-color: var(--brand-color) !important;
+}

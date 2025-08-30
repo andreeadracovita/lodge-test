@@ -1,0 +1,14 @@
+.avatar-container {
+	aspect-ratio: 1 / 1;
+	border-radius: var(--border-radius);
+	padding: 1px;
+}
+
+.avatar-container:hover {
+	background-color: var(--light-brand-color);
+	cursor: pointer;
+}
+
+#avatar-input {
+	display: none;
+}

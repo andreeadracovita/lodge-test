@@ -10,7 +10,5 @@ export default function RequireAuth({ children }: RequireAuthProps) {
 	const authContext: any = useAuth();
 	const location = useLocation();
 
-	console.log(authContext.isAuthenticated);
-
-	return authContext.isAuthenticated ? children : <Navigate to="/" replace state={{ path: location.pathname }} />
+	return authContext.isAuthenticated ? children : <Navigate to="/signup-login" replace state={{ path: location.pathname }} />
 }

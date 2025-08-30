@@ -1,42 +1,440 @@
+/* https://colorkit.co/color/371590/ */
+:root {
+  /* font-family: system-ui, Avenir, Helvetica, Arial, sans-serif; */
+  --brand-color: #371590; /* Options: Gentian Blue #371590 */
+  --light-brand-color: #ccceff; /* Highlights; Options: #ccceff (blue-ish), cdbaff (pink-ish) */
+  --darker-brand-color: #260C6A; /* Button hover; Options: #1E0857 */
+
+  --bright-red: #FF3131; /* Heart */
+  --light-grey: #E7E7E7; /* Form/sections border, hr, vr */
+  --lighter-grey: #f2f2f2; /* Host calendar past */
+  --medium-grey: #BEBBBB;
+  --dark: #000000;
+  --contrast: #FFA600; /* Options: #ffa600, #ffca3a, #8eba1b, #F26849, #FF5733 */
+  
+  --body-font-size: 14px;
+  --nav-font-size: 16px; /* Navbar links */
+  --title-size: 16px; /* Review title */
+  --headline-1-font-size: 32px; /* Account page title */
+  --headline-2-font-size: 24px; /* Property page title, home sections heading */
+  --headline-3-font-size: 20px; /* Search results title + bold, property price on card */
+  --strong-font-size: 16px; /* Property card heading */
+  --small-font-size: 12px; /* Property card details */
+  --optical-mult: 0.0625rem;
+
+  --border-radius: 12px; /* 12px */
+}
+
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Start: HTML tag overrides -------------------------------------------------- */
+h1 {
+  margin: 0px;
+}
+
+h2 {
+  margin: 0px;
+}
+
+h3 {
+  margin: 0px;
+}
+
+header {
+  background-color: var(--brand-color);
+  color: white;
+}
+
+footer {
+  background-color: var(--brand-color);
+  color: white;
+  margin-top: auto;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+  color: var(--dark);
+  font-size: var(--body-font-size);
+}
+
+main {
+  margin-bottom: 2rem;
+}
+
+hr {
+  border-top: 1px solid var(--light-grey);
+  opacity: 1;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+svg {
+  pointer-events: none;
+}
+/* End: Tag overrides --------------------------------------------------------- */
+
+/* Start: Bootstrap overrides ------------------------------------------------- */
+.form-check-input:checked {
+  background-color: var(--brand-color);
+  border-color: var(--brand-color);
+}
+.form-check-input:focus {
+  border-color: var(--light-brand-color);
+}
+/* End: Bootstrap overriders -------------------------------------------------- */
+
+/* Start: Font ---------------------------------------------------------------- */
+.text-bold {
+  font-weight: 700;
+}
+
+.brand-font {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.nav-item-font {
+  font-size: var(--nav-font-size);
+}
+
+.brand-color-text {
+  color: white;
+}
+
+.heading {
+  color: var(--brand-color);
+}
+
+/* Page title */
+.page-heading {
+  font-size: var(--headline-1-font-size);
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Property page title, home sections heading */
+.section-heading {
+  font-size: var(--headline-2-font-size);
+  font-weight: 700;
+}
+
+.property-card-heading {
+  font-size: var(--strong-font-size);
+  font-weight: 700;
+}
+
+.property-card-details {
+  font-size: var(--small-font-size);
+}
+
+.property-card-price {
+  font-size: var(--headline-3-font-size);
+}
+
+.error-font {
+  font-size: 0.75rem;
+  margin-bottom: 0px;
+}
+
+.text-red {
+  color: red;
+}
+
+.brand-font-color {
+  color: var(--brand-color);
+}
+
+.title-text {
+  font-size: var(--title-size);
+  font-weight: 700;
+}
+/* End: Font ------------------------------------------------------------------ */
+
+/* Start: Spacing ------------------------------------------------------------- */
+.section-container {
+  margin-top: 2rem;
+}
+
+.mt-6 {
+  margin-top: 6px;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+/* End: Spacing --------------------------------------------------------------- */
+
+/* Start: Containers ---------------------------------------------------------- */
+/* BS override */
+.container {
+  max-width: 1110px; /* padding-x 5, content 1100 */
+  padding: 0px 5px;
+}
+
+.border-section {
+  border: 1px solid var(--light-grey);
+  border-radius: var(--border-radius);
+  padding: 16px;
+}
+
+.card-item {
+  box-shadow: 0px 3px 15px rgba(0,0,0,0.15);
+  border-radius: var(--border-radius);
+  padding: 10px;
+}
+
+#landing-greeting-section {
+  background-color: black;
+  height: 400px;
+}
+
+#landing-greeting-section-container {
+  box-shadow: 10px 0px 10px black inset, -10px 0px 10px black inset;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#home-search-bar {
+  margin-top: auto;
+}
+
+/* Rename: modal-container */
+.sign-in-container {
+  width: 450px;
+}
+
+.features-list-item {
+  border: 1px solid var(--medium-grey);
+  border-radius: 50rem;
+  min-width: 60px;
+  margin: 0.25rem;
+  margin-inline-end: 0.25rem;
   text-align: center;
+  padding: 6px 10px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.filter-pill {
+  border: 1px solid var(--brand-color);
+  /*background-color: var(--light-brand-color);*/
+  color: var(--brand-color);
+  border-radius: 50rem;
+  min-width: 60px;
+  margin: 0.25rem;
+  margin-inline-end: 0.25rem;
+  text-align: center;
+  padding: 6px 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.account-card {
+  height: 172px;
 }
 
-.card {
-  padding: 2em;
+.pill-container {
+  border: 1px solid var(--light-grey);
+  background-color: white;
 }
 
-.read-the-docs {
-  color: #888;
+.carousel-control-prev {
+  width: auto;
+  opacity: 1;
+}
+
+.carousel-control-next {
+  width: auto;
+  opacity: 1;
+}
+/* End: Containers ------------------------------------------------------------ */
+
+/* Start: Buttons ------------------------------------------------------------- */
+.btn-text-underline {
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: underline;
+  display: block;
+  border: none;
+  background: transparent;
+  padding: 0;
+}
+
+.btn-pill {
+  background: var(--brand-color);
+  border: none;
+  border-radius: 50rem;
+  padding: 0.375rem 0.75rem;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  transition: background 0.15s ease-in-out;
+  cursor: pointer;
+  color: white;
+}
+
+.btn-pill:hover {
+  background: var(--darker-brand-color);
+}
+
+.btn-pill-outline {
+  background: transparent;
+  border: 1px solid var(--dark);
+  border-radius: 50rem;
+  padding: 0.375rem 0.75rem;
+  line-height: 1.5;
+  display: inline-block;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.15s ease-in-out;
+}
+
+.btn-round {
+  background: var(--brand-color);
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.15s ease-in-out;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-round:hover {
+  background: var(--darker-brand-color);
+}
+
+.btn-pill-hover-only {
+  background: var(--light-grey); /* transparent; */
+  border-radius: 50rem;
+  padding: 0.375rem 0.75rem;
+  line-height: 1.5;
+  display: inline-block;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.15s ease-in-out;
+}
+
+.btn-pill-hover-only:hover {
+  background: var(--light-brand-color);
+}
+
+/* ... */
+.btn-more {
+  background: transparent;
+  border: 1px solid var(--light-grey);
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+}
+
+.btn-rectangle-fill {
+  background: var(--brand-color);
+  padding: 0.75rem 0.75rem;
+  color: white;
+  border-radius: var(--border-radius);
+}
+/* End: Buttons --------------------------------------------------------------- */
+
+/* Start: Photos -------------------------------------------------------------- */
+.list-item-photo {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+}
+
+.trip-card-photo {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+}
+/* End: Photos ---------------------------------------------------------------- */
+
+/* Start: Forms --------------------------------------------------------------- */
+.form-control:focus {
+  border-color: var(--light-brand-color);
+  box-shadow: 0 0 0 0.25rem var(--light-brand-color);
+}
+/* End: Forms ----------------------------------------------------------------- */
+
+.sticky {
+  position: sticky;
+  top: 0;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.brand-color-background {
+  background-color: var(--brand-color);
+}
+
+.brand-icon {
+  fill: var(--brand-color);
+  fill-rule: evenodd;
+}
+
+.brand-color-fill {
+  fill: var(--brand-color);
+}
+
+.selected-tab {
+  border: 1px solid var(--dark);
+}
+
+#calendar-sheet {
+  height: 750px;
+  overflow: scroll;
+}
+
+.focusable {
+  padding: 0.375rem 0.75rem;
+  border: 1px transparent;
+}
+
+.focusable:focus {
+  border-color: var(--light-brand-color);
+  box-shadow: 0 0 0 0.25rem var(--light-brand-color);
+}
+
+.bubble-click {
+  pointer-events: none;
+}
+
+.search-page-fixed-width-left {
+  min-width: 280px;
+  max-width: 280px;
+}
+
+.carousel-inner {
+  text-align: inherit;
+}
+
+#mobile-book-container {
+  background-color: white;
 }
