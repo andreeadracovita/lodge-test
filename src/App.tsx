@@ -9,7 +9,7 @@ import Home from "pages/Home";
 // import Stay from "pages/Stay";
 // import Book from "pages/Book";
 // import Booking from "pages/Booking";
-// import SearchResults from "pages/SearchResults";
+import SearchResults from "pages/SearchResults";
 import SignupLogin from "pages/SignupLogin";
 
 import Account from "pages/account/Account";
@@ -36,7 +36,7 @@ export default function App() {
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
-            {/*<Route path="/search-results" element={<SearchResults />} />*/}
+            <Route path="/search-results" element={<SearchResults />} />
             {/*<Route path="/stay" element={<Stay />} />*/}
             {/*<Route path="/book" element={<Book />} />*/}
             {/*<Route path="/booking" element={<Booking />} />*/}
